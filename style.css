@@ -1,0 +1,212 @@
+/* ======================== COLOR PALLETE ======================= */
+:root {
+    --background-color: #9ac1f0;
+    --text-black: #000;
+    --text-white: #fff;
+    --highligh: #72fa93;
+    --highlight-2: #a0e548;
+    --button: #e45f2b;
+    --button-2: #f6c445;
+    --: ;
+}
+
+/* ======================== NAVBAR ======================= */
+.nav {
+    height: 75px;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    background: transparent;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    padding: 20px 20px;
+}
+
+.logo {
+    max-height: 80px;
+    font-weight: bold;
+    color: var(--button);
+    font-size: 30px;
+}
+
+.logo img {
+    max-height: 75px;
+    height: auto;
+    width: auto;
+    margin-top: 3px;
+}
+
+.navlinks {
+    display: flex;
+    gap: 10px;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navlinks li a {
+    color: var(--text-white);
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    border-radius: 20;
+    padding: 8px 16px;
+    transition: color 0.3s ease, color 0.3s ease;
+}
+
+.navlinks li a:hover {
+    color: var(--button);
+    background-color: var(--text-black);
+    border-radius: 20px;
+}
+
+.burger {
+    display: none;
+    text-decoration: none;
+}
+
+.burger:hover span{
+    background: var(--button);
+}
+
+.line {
+    display: block;
+    height: 2px;
+    background-color: var(--text-white);
+    margin: 6px 5px;
+}
+
+.line.full {
+    width: 20px;
+}
+
+.line.half {
+    width: 10px;
+}
+
+
+/* ======================== FOR SMALL MEDIA SCREENS ======================= */
+@media (max-width: 768px) {
+    .burger {
+        display: block;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+    }
+    .navlinks {
+        display: none;
+    }
+    .hero {
+        align-items: flex-start;
+        margin-top: 50px;
+    }
+}
+
+
+
+/* ======================== HTML & BODY ======================= */
+html, body {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-white);
+    background-color: var(--background-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.hero {
+    justify-content: space-around;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: var(--text-white);
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.alex {
+    color: var(--button);
+    font-weight: bold;
+}
+
+.content {
+    max-width: 400px;
+}
+
+.hero, .contact {
+    padding: 40px 20px;
+}
+
+.content, .contact {
+    max-width: 500px;
+    margin: 0 auto;
+    flex: 1 1 350px;
+}
+
+.contact {
+    background: var(--text-white);
+    color: #333;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+}
+
+.contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+}
+
+.contact button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: var(--highlight-2);
+    color: var(--text-white);
+    margin-top: 10px;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.contact h2 {
+    align-items: center;
+    width: 100%;
+}
